@@ -1,4 +1,4 @@
-use std::fs;
+mod utils;
 
 fn part1(file_content: &str) {
     let mut acc = 0;
@@ -131,17 +131,13 @@ fn part2(file_content: &str) {
     println!("{acc}");
 }
 
-fn read_file(file_path: &str) -> String {
-    return fs::read_to_string(&file_path).expect("File not found or unable to read");
-}
-
 fn main() {
     let args: Vec<String> = std::env::args().collect();
     let mut file_path = "./input.txt";
     if args.len() >= 2 {
         file_path = &args[1];
     }
-    let file_content = read_file(&file_path);
+    let file_content = utils::read_file(&file_path);
 
     part1(&file_content);
     part2(&file_content);
