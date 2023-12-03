@@ -19,3 +19,8 @@ pub fn get_input_path() -> String {
 pub fn get_file_content(file_path: &str) -> String {
     return read_file(file_path);
 }
+
+#[allow(dead_code)]
+pub fn char_at(str: &str, index: usize) -> Option<char> {
+    return str.chars().nth(index);
+}
