@@ -95,5 +95,5 @@ pub fn start(file_content: &str) {
             res = seed.0 as u64;
         }
     }
-    println!("Result: {}", res);
+    println!("{}", res);
 }
