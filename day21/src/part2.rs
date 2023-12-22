@@ -45,7 +45,7 @@ pub fn start(file_content: &str) {
     let count_c = stepped_plots.len() as i128;
 
     let first_member =
-        count_a * (((STEPS - step_b) * (STEPS - step_c)) / ((step_a - step_b) * (step_a - step_c)));
+        count_a * ((STEPS - step_b) * (STEPS - step_c)) / ((step_a - step_b) * (step_a - step_c));
     let second_member =
         count_b * ((STEPS - step_a) * (STEPS - step_c)) / ((step_b - step_a) * (step_b - step_c));
     let third_member =
